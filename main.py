@@ -126,7 +126,8 @@ def process_urls(urls):
             money += float(num)
         except KeyError:
             pass
-        print(statistic)
+        with open(output_file,'a') as output:
+            output.write(statistic)
         print(f"money: {money}")
     return results
 
